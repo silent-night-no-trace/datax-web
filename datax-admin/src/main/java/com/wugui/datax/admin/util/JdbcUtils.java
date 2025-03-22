@@ -1,7 +1,6 @@
 package com.wugui.datax.admin.util;
 
-
-import org.apache.xerces.impl.dv.util.HexBin;
+import cn.hutool.core.util.HexUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -257,7 +256,7 @@ public final class JdbcUtils implements  JdbcConstants {
                     } else {
                         if (object instanceof byte[]) {
                             byte[] bytes = (byte[]) object;
-                            String text = HexBin.encode(bytes);
+                            String text = HexUtil.encodeHexStr(bytes);
                             out.print(text);
                         } else {
                             out.print(String.valueOf(object));

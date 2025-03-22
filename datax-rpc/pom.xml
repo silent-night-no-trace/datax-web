@@ -6,13 +6,14 @@
     <parent>
         <artifactId>datax-web</artifactId>
         <groupId>com.wugui</groupId>
-        <version>2.1.2</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>datax-rpc</artifactId>
     <packaging>jar</packaging>
+
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>

@@ -50,8 +50,7 @@ management:
     mail:
       enabled: false
   server:
-    servlet:
-      context-path: /actuator
+    base-path: /actuator
 
 mybatis-plus:
   # mapper.xml文件扫描

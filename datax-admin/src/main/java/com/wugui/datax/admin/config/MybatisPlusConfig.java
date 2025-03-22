@@ -2,6 +2,7 @@ package com.wugui.datax.admin.config;
 
 import com.baomidou.mybatisplus.core.injector.DefaultSqlInjector;
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
+
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
@@ -23,7 +24,6 @@ public class MybatisPlusConfig {
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
-
         PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
         return paginationInterceptor.setOverflow(true);
     }
@@ -33,7 +33,7 @@ public class MybatisPlusConfig {
      * 3.0.7.1版本的LogicSqlInjector里面什么都没做只是 extends DefaultSqlInjector
      * 以后版本直接去的了LogicSqlInjector
      *
-     * @return
+     * @return ISqlInjector
      */
     @Bean
     public ISqlInjector sqlInjector() {
